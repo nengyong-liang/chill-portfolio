@@ -1,5 +1,7 @@
 # 🎮 个人主页 - Chill 版
 
+> **🌐 在线访问**: https://nengyong-liang.github.io/chill-portfolio
+
 基于 [macOS-Themed-Portfolio](https://github.com/ansxuman/macOS-Themed-Portfolio) 构建的趣味性个人主页。
 
 ## 🌟 特性
@@ -124,6 +126,38 @@ const initialProjects: ProjectData[] = [
 - 常用应用快捷方式
 - 悬停放大动画
 - 当前应用指示器
+
+## ⚠️ 安全注意事项
+
+### 敏感信息保护
+
+**不要上传以下内容到 GitHub**：
+
+- ❌ `.env` 文件（包含 API keys）
+- ❌ `package-lock.json`（可能包含本地路径）
+- ❌ `node_modules/`（依赖包）
+- ❌ `build/`（构建产物）
+- ❌ 个人敏感信息（邮箱、电话等）
+
+**已配置 `.gitignore`**：
+```gitignore
+node_modules
+package-lock.json
+.output
+.svelte-kit
+/build
+.env
+.env.*
+.DS_Store
+```
+
+### 环境变量
+
+如果需要使用 API keys，请使用 GitHub Secrets：
+
+1. 在 GitHub 仓库 Settings > Secrets and variables > Actions
+2. 添加 Secret：`DEV_TO_API_KEY`
+3. 在 workflow 中使用：`${{ secrets.DEV_TO_API_KEY }}`
 
 ## 📦 构建和部署
 
