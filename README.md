@@ -1,96 +1,261 @@
-<h1 align="center">
- macOS-Themed Portfolio
-</h1>
+# 🎮 个人主页 - Chill 版
 
-  <br>
+基于 [macOS-Themed-Portfolio](https://github.com/ansxuman/macOS-Themed-Portfolio) 构建的趣味性个人主页。
 
-A unique, interactive portfolio website inspired by the macOS interface : https://ssh-i.in || https://macosportfolio.netlify.app
-<p align="center">
-  <a href="#projectoverview">ProjectOverview</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a> •
-</p>
+## 🌟 特性
 
-![macOS-Themed Portfolio](https://github.com/user-attachments/assets/2859e409-c4d2-47ce-a810-885c01cddd83)
-  Powered by [SvelteKit](https://kit.svelte.dev/), [TailwindCSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/).
+- 🖥️ **macOS 桌面风格** - 熟悉的桌面环境
+- 🪟 **可拖拽窗口** - 模拟真实窗口系统
+- 🎵 **音乐播放器** - 内置音乐播放功能
+- 📸 **照片展示** - 照片库应用
+- 💻 **终端模拟器** - 极客风格项目展示
+- 🎨 **Launchpad** - 应用启动器
+- 🌐 **Safari 浏览器** - 博客查看器
+- 🎯 **强交互性** - 趣味十足的体验
 
+## 🚀 本地开发
 
-## ProjectOverview
+```bash
+# 安装依赖
+npm install
 
-This project is a personal portfolio website that mimics the look and feel of macOS. It features:
+# 启动开发服务器
+npm run dev
 
-## Core Features
-- A desktop-like interface with Status Bar, Widgets and Dock
-- Launchpad for an app-like experience
-- Draggable and resizable windows
-- Minimizable, maximizable and closable windows
+# 构建生产版本
+npm run build
 
-## Desktop Widgets
-- Music Player
-  - Copyright Free playlist with play controls
-  - Genre selection and volume control
-- Clock Widget
-  - Live date and time display
+# 类型检查
+npm run check
+```
 
-## Applications
-- Terminal
-  - Interactive command-line interface
-  - Supports basic Linux commands
-- Blog Viewer
-  - Connected to Dev.to
-  - Read articles directly in the window
-- Project Showcase
-  - Live GitHub repository integration
-- Photo Gallery
-  - Personal photography collection
-- Safari Browser
-  - Browse websites within the portfolio
+## 📝 配置说明
 
-## installation
+### 1. 开发者信息配置
 
-Clone the repo:
-   ```bash
-   git clone https://github.com/ansxuman/macOS-Themed-Portfolio/
-   ```
+编辑 `src/lib/utils/devInfo.ts`:
 
-Install dependencies:
-   ```bash
-   npm install
-   ```
-Run the development server:
-   ```bash
-   npm run dev
-   ```
-Open http://localhost:1111 in your browser to see the result.
+```typescript
+export const nengyong: Developer = {
+  about: `I'm Ultraman Tiga`,
+  
+  code: [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "HTML",
+    "CSS",
+  ],
+  
+  interests: [
+    "Web 开发",
+    "开源项目",
+    "技术探索",
+  ],
+  
+  operatingSystems: ["Windows", "Linux"],
+  toolsUsed: ["Git", "VS Code"],
+  ides: ["VS Code", "Cursor"],
+};
+```
 
-Build for production:
-   ```bash
-   npm run build
-   ```
+### 2. 项目列表配置
 
-To make the dev.to article work,update API Key in the .env file
-   ```bash
-   DEV_TO_API_KEY=<YOUR_API_KEY>
-   ```
-## Contributing
+编辑 `src/lib/stores/projectStore.ts`:
 
-Contributions are what make the open-source community an incredible space for learning, inspiration, and creativity. Any contribution you make is deeply appreciated.
+```typescript
+const initialProjects: ProjectData[] = [
+  {
+    id: 'EVAC_MIND',
+    name: 'EVAC-MIND',
+    icon: 'python',  // 图标：python, code, java, go, rust, svelte, wails
+    shortDescription: '项目描述',
+    githubUrl: 'https://github.com/nengyong-liang/EVAC-MIND',
+    readmeUrl: 'https://raw.githubusercontent.com/.../main/README.md',
+    technologies: ['Python'],
+    type: 'library'  // 或 'application'
+  },
+  // ... 更多项目
+];
+```
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### 3. 音乐播放列表
 
-## Donations
+编辑 `src/lib/utils/musicPlaylists.ts` 添加你的音乐。
 
-If you find this content useful, please consider donating to support its development and future improvements.
+### 4. 照片库
 
-<a href="https://buymeacoffee.com/ansxuman" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+将照片添加到 `src/lib/assets/photos/` 目录。
 
+## 🎨 应用说明
 
+### Terminal (终端)
 
-## License
+- 展示 GitHub 项目
+- 支持命令交互
+- 显示项目 README
 
-This project is licensed under the [Apache-2.0 license](LICENSE).
+### Safari (浏览器)
+
+- 博客文章查看器
+- Markdown 渲染
+- 代码高亮
+
+### Music (音乐播放器)
+
+- 播放列表管理
+- 播放控制
+- 专辑封面展示
+
+### Photos (照片)
+
+- 照片库展示
+- 网格布局
+- 大图预览
+
+### Launchpad (启动器)
+
+- 应用图标网格
+- 快速启动应用
+- macOS 风格动画
+
+### Dock (程序坞)
+
+- 常用应用快捷方式
+- 悬停放大动画
+- 当前应用指示器
+
+## 📦 构建和部署
+
+### 构建
+
+```bash
+npm run build
+```
+
+输出目录：`build/`
+
+### 部署到 GitHub Pages
+
+项目已配置 GitHub Actions，推送到 `main` 分支后自动部署。
+
+**手动部署**:
+
+```bash
+# 安装 gh-pages
+npm install -D gh-pages
+
+# 部署
+npx gh-pages -d build
+```
+
+## 📁 项目结构
+
+```
+portfolio-chill/
+├── src/
+│   ├── lib/
+│   │   ├── assets/           # 静态资源
+│   │   │   ├── icons/       # 应用图标
+│   │   │   ├── images/      # 图片资源
+│   │   │   ├── mp3s/        # 音乐文件
+│   │   │   └── photos/      # 照片文件
+│   │   ├── components/      # Svelte 组件
+│   │   │   ├── Desktop.svelte    # 桌面
+│   │   │   ├── Dock.svelte       # Dock 栏
+│   │   │   ├── Terminal.svelte   # 终端
+│   │   │   ├── Safari.svelte     # 浏览器
+│   │   │   ├── MusicPlayer.svelte # 音乐播放器
+│   │   │   ├── Photos.svelte     # 照片库
+│   │   │   ├── Launchpad.svelte  # 启动器
+│   │   │   └── Window.svelte     # 窗口组件
+│   │   ├── stores/          # Svelte 状态管理
+│   │   │   ├── projectStore.ts  # 项目数据
+│   │   │   ├── blogStore.ts     # 博客数据
+│   │   │   └── windowStore.ts   # 窗口状态
+│   │   ├── types/           # TypeScript 类型
+│   │   │   ├── projectType.ts
+│   │   │   ├── blogType.ts
+│   │   │   └── music.ts
+│   │   └── utils/           # 工具函数
+│   │       ├── devInfo.ts       # 开发者信息
+│   │       ├── fileSystem.ts    # 虚拟文件系统
+│   │       ├── syncProjects.ts  # 项目同步
+│   │       └── musicPlaylists.ts # 音乐播放列表
+│   ├── routes/
+│   │   ├── +page.svelte     # 主页
+│   │   ├── +layout.svelte   # 布局
+│   │   └── api/             # API 路由
+│   ├── app.css              # 全局样式
+│   ├── app.html             # HTML 模板
+│   └── app.d.ts             # 类型声明
+├── static/
+│   ├── favicon.png
+│   ├── og-image.png
+│   └── robots.txt
+├── svelte.config.js
+├── vite.config.ts
+├── tailwind.config.js
+├── package.json
+└── README.md
+```
+
+## 🔧 技术栈
+
+- **框架**: SvelteKit 2.x
+- **语言**: TypeScript
+- **样式**: Tailwind CSS 3.x
+- **构建工具**: Vite 5.x
+- **状态管理**: Svelte Stores
+- **Markdown 渲染**: svelte-markdown
+- **代码高亮**: Prism.js
+
+## 🎯 窗口系统
+
+### 窗口类型
+
+1. **Application Window** - 应用窗口
+2. **Browser Window** - 浏览器窗口
+3. **Terminal Window** - 终端窗口
+
+### 窗口特性
+
+- 可拖拽移动
+- 可调整大小
+- 最小化/最大化
+- 焦点管理
+- Z-index 层级
+
+## 🎮 交互说明
+
+### 键盘快捷键
+
+- `Cmd/Ctrl + K` - 打开 Spotlight 搜索
+- `Esc` - 关闭窗口
+- `F11` - 全屏
+
+### 鼠标交互
+
+- **拖拽** - 窗口标题栏
+- **点击** - 打开应用
+- **悬停** - Dock 图标放大
+- **右键** - 上下文菜单（待实现）
+
+## 📊 性能优化
+
+- 图片懒加载
+- 代码分割
+- 组件按需加载
+- 虚拟滚动（待实现）
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+## 📄 许可证
+
+基于 [macOS-Themed-Portfolio](https://github.com/ansxuman/macOS-Themed-Portfolio) (MIT License)
+
+---
+
+**Made with ❤️ by nengyong-liang**

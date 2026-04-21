@@ -1,57 +1,72 @@
+// 此文件根据 GitHub 数据自动生成
+// 最后更新时间：2026/4/21 20:06:31
+// 可以手动添加或修改项目
+
 import { writable } from 'svelte/store';
 import type { ProjectData } from '../types/projectType';
 
 const initialProjects: ProjectData[] = [
   {
-    id: 'Clave',
-    name: 'Clave',
-    icon: 'wails',
-    shortDescription: 'A lightweight cross-platform desktop authenticator app',
-    githubUrl: 'https://github.com/ansxuman/clave',
-    readmeUrl: 'https://raw.githubusercontent.com/ansxuman/clave/main/README.md',
-    technologies: ['Go','Wails','Svelte', 'TypeScript', 'TailwindCSS'],
-    type: 'application'
-  },
-  {
-    id: 'macOS-Themed-Portfolio',
-    name: 'macOS Themed Portfolio',
-    icon: 'svelte',
-    shortDescription: 'An interactive portfolio website inspired by the macOS interface, built with SvelteKit, TailwindCSS, and TypeScript.',
-    githubUrl: 'https://github.com/ansxuman/macOS-Themed-Portfolio',
-    readmeUrl: 'https://raw.githubusercontent.com/ansxuman/macOS-Themed-Portfolio/main/README.md',
-    technologies: ['Svelte', 'TypeScript', 'TailwindCSS'],
-    type: 'application'
-  },
-  {
-    id: 'go-service',
-    name: 'Go Service',
-    icon: 'go',
-    shortDescription: 'A minimal boilerplate for building cross-platform system services in Go',
-    githubUrl: 'https://github.com/ansxuman/go-service',
-    readmeUrl: 'https://raw.githubusercontent.com/ansxuman/go-service/main/README.md',
-    technologies: ['Go'],
+    id: 'EVAC_MIND',
+    name: 'EVAC-MIND',
+    icon: 'python',
+    shortDescription: '暂无描述',
+    githubUrl: 'https://github.com/nengyong-liang/EVAC-MIND',
+    readmeUrl: 'https://raw.githubusercontent.com/nengyong-liang/EVAC-MIND/main/README.md',
+    technologies: ['Python'],
     type: 'library'
   },
   {
-    id: 'go-touchid',
-    name: 'Go TouchID',
-    icon: 'go',
-    shortDescription: 'A simple Go Library for Touch ID authentication on darwin.',
-    githubUrl: 'https://github.com/ansxuman/go-touchid',
-    readmeUrl: 'https://raw.githubusercontent.com/ansxuman/go-touchid/main/README.md',
-    technologies: ['Go', 'macOS', 'TouchID'],
+    id: 'MultiMod_VisionDet',
+    name: 'MultiMod-VisionDet',
+    icon: 'python',
+    shortDescription: '暂无描述',
+    githubUrl: 'https://github.com/nengyong-liang/MultiMod-VisionDet',
+    readmeUrl: 'https://raw.githubusercontent.com/nengyong-liang/MultiMod-VisionDet/main/README.md',
+    technologies: ['Python'],
     type: 'library'
   },
   {
-    id: 'go-version-compare',
-    name: 'Go Version Compare',
-    icon: 'go',
-    shortDescription: 'Go Library for Version Comparison',
-    githubUrl: 'https://github.com/ansxuman/versioncompare',
-    readmeUrl: 'https://raw.githubusercontent.com/ansxuman/versioncompare/main/README.md',
-    technologies: ['Go'],
+    id: 'MemoryHole',
+    name: 'MemoryHole',
+    icon: 'code',
+    shortDescription: '暂无描述',
+    githubUrl: 'https://github.com/nengyong-liang/MemoryHole',
+    readmeUrl: 'https://raw.githubusercontent.com/nengyong-liang/MemoryHole/main/README.md',
+    technologies: ['HTML'],
     type: 'library'
   },
+  {
+    id: 'NLP_course',
+    name: 'NLP-course',
+    icon: 'python',
+    shortDescription: '暂无描述',
+    githubUrl: 'https://github.com/nengyong-liang/NLP-course',
+    readmeUrl: 'https://raw.githubusercontent.com/nengyong-liang/NLP-course/main/README.md',
+    technologies: ['Python'],
+    type: 'library'
+  },
+  {
+    id: 'clip_reid_lny',
+    name: 'clip-reid-lny',
+    icon: 'python',
+    shortDescription: '暂无描述',
+    githubUrl: 'https://github.com/nengyong-liang/clip-reid-lny',
+    readmeUrl: 'https://raw.githubusercontent.com/nengyong-liang/clip-reid-lny/main/README.md',
+    technologies: ['Python'],
+    type: 'library'
+  },
+  {
+    id: 'Data_Mining_Practice',
+    name: 'Data-Mining-Practice',
+    icon: 'python',
+    shortDescription: '暂无描述',
+    githubUrl: 'https://github.com/nengyong-liang/Data-Mining-Practice',
+    readmeUrl: 'https://raw.githubusercontent.com/nengyong-liang/Data-Mining-Practice/main/README.md',
+    technologies: ['Python'],
+    type: 'library'
+  }
+  // 可以手动添加更多项目
 ];
 
 export const projects = writable<ProjectData[]>(initialProjects);

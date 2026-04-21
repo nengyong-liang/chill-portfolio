@@ -1,7 +1,7 @@
+// 个人开发者信息配置
+// 请根据实际情况手动修改
+
 export interface Developer {
-  // name: string;
-  // role: string;
-  // company: string;
   about: string;
   code: string[];
   interests: string[];
@@ -10,20 +10,22 @@ export interface Developer {
   ides: string[];
 }
 
-export const ansxuman: Developer = {
-  // name: "Anshuman",
-  // role: "Product Engineer",
-  // company: "InstaSafe",
-  about: "Hey, I'm Anshuman, a Software Developer with a keen interest in building scalable \nand secure applications.Always eager to learn and experiment with new technologies.",
-  code: ["Golang", "Svelte", "Angular", "TS", "JS", "Java", "Swift", "Rust", "Python"],
-  interests: [
-    "Full-Stack Development",
-    "Cybersecurity",
-    "DevOps",
-    "Writing Blogs",
-    "Experimenting with New Technologies",
+export const nengyong: Developer = {
+  about: `I'm Ultraman Tiga`,
+  code: [
+    // 根据你的实际技术栈修改
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "HTML",
+    "CSS",
   ],
-  operatingSystems: ["macOS 15 Sequoia", "Debian Bookworm", "Ubuntu"],
-  toolsUsed: ["Docker", "Git", "Parallels", "Termius", "Postman"],
-  ides: ["Cursor", "Zed", "VSCode", "Android Studio", "Xcode", "Neovim"],
+  interests: [
+    "Web 开发",
+    "开源项目",
+    "技术探索",
+  ],
+  operatingSystems: ["Windows", "Linux"],
+  toolsUsed: ["Git", "VS Code"],
+  ides: ["VS Code", "Cursor"],
 };
