@@ -1,26 +1,26 @@
-import { ansxuman } from "./devInfo";
+import { nengyong } from "./devInfo";
 import { syncProjectsToFileSystem } from "./syncProjects";
 
 export const fileSystem: FileSystem = {
   home: {
     about: `
-${ansxuman.about}
+${nengyong.about}
 
 Programming Languages:
-${ansxuman.code.join(", ")}
+${nengyong.code.join(", ")}
 
 Operating Systems:
-${ansxuman.operatingSystems.join(", ")}
+${nengyong.operatingSystems.join(", ")}
 
 Tools Used:
-${ansxuman.toolsUsed.join(", ")}
+${nengyong.toolsUsed.join(", ")}
 
 IDEs:
-${ansxuman.ides.join(", ")}
+${nengyong.ides.join(", ")}
     `,
     projects: {},
     interests: `
-${ansxuman.interests.join("\n")}
+${nengyong.interests.join("\n")}
     `,
   },
 };
